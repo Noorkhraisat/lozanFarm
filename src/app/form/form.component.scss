@@ -1,0 +1,91 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  
+    height: 100vh;
+    width: 100%;
+  }
+  .images {
+    padding: 24px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainContainer {
+    display: flex;
+  }
+  .halfPage {
+    min-width: 50%;
+    height: 100vh;
+    background-image: url("https://lh3.googleusercontent.com/p/AF1QipNaQO7rQ630FfqGMNP0TyOmF37SQULcWemYWCvp=w1080-h608-p-no-v0");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .image {
+    padding: 0 8px;
+    box-shadow: -2px -2px 8px 1px rgb(204, 204, 204);
+  }
+  .form {
+    width: 90%;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    box-shadow: -2px -2px 8px 1px rgb(204, 204, 204);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .title {
+    border-radius: 8px;
+    padding: 24px;
+    background-color: #165634;
+    color: white;
+  }
+  .form-group {
+    padding: 24px;
+    * {
+      padding: 4px;
+    }
+  }
+  .submitBtn {
+    width: 150px;
+    margin: 24px;
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #165634;
+  }
+  .instructions {
+    padding: 4px;
+    color: black;
+  }
+  .instructionsRed {
+    color: red;
+  }
+  .submittedRequest {
+    height: 100vh;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .msgCard {
+    width: max-content;
+    border-radius: 15px;
+    box-shadow: -2px -2px 8px 1px rgb(204, 204, 204);
+    height: max-content;
+    padding: 48px;
+    text-align: center;
+  }
+  

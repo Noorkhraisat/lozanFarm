@@ -1,0 +1,232 @@
+<div class="submittedRequest" *ngIf="submittedRequest">
+    <div class="msgCard">
+      <h3>the request has been submitted</h3>
+      <p>thank you for filling the form :)</p>
+    </div>
+  </div>
+  
+  <div class="mainContainer" *ngIf="!submittedRequest">
+    <div class="container">
+      <div class="images">
+        <img
+          class="image"
+          width="400px"
+          height="300px"
+          src="https://lh3.googleusercontent.com/p/AF1QipNaQO7rQ630FfqGMNP0TyOmF37SQULcWemYWCvp=w1080-h608-p-no-v0"
+        />
+        <img
+          class="image"
+          width="400px"
+          height="300px"
+          src="https://lh3.googleusercontent.com/p/AF1QipMJC5MqmpjpXY-I3Lj5BJQBE3Hi1RzXe4Dme5gf=w768-h768-n-o-v1"
+        />
+        <img
+          class="image"
+          width="400px"
+          height="300px"
+          src="https://scontent.famm7-1.fna.fbcdn.net/v/t39.30808-6/279668097_1169458183879203_4620100387133128934_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=U0Fz9BWGrs8AX8MERLt&tn=4IhFu1LEpHOl3i0r&_nc_ht=scontent.famm7-1.fna&oh=00_AT8XEq-pnho1JnXFtvrDnbE2UmdUaiK2FV_iNIV3eh2g1w&oe=6337A25F"
+        />
+      </div>
+      <form [formGroup]="angForm" novalidate class="form">
+        <div class="title">
+          <h1>Lozan farm</h1>
+        </div>
+        <hr />
+  
+        <div>
+          <p class="instructions">
+            Our Taheel Family, as you have invested so much time and effort on
+            this project, its time to let off some steam. Hence we are arranging a
+            BBQ gathering this weeked to come together on something other than
+            work and enjoy the last days of summer !!
+            <br />
+            <br />
+  
+            We will have a one-day joyful trip and we would be very happy if you
+            could join us. Many delicious foods, happy events, & exciting games
+            will be organized to entertain you.
+          </p>
+  
+          <ul>
+            <li>The Date: <strong> 01-Oct-2022 </strong></li>
+            <li>The Day: <strong> Saturday </strong></li>
+            <li>Gathering Time: <strong> 10:30 AM </strong></li>
+            <li>
+              The Place:
+              <strong>
+                Lozan Villa
+                <a href="https://lozan-villa.business.site/">
+                  (click here to recognize the exact location and more photos of
+                  the villa)
+                </a>
+              </strong>
+            </li>
+  
+            <li>Be There: <strong> 11:00 AM </strong></li>
+            <li>Go Home: <strong> 08:00 PM </strong></li>
+            <li>
+              Estimated Cost:
+              <strong
+                >15-20 JOD/Person* (Calculated after getting the final list of
+                attendees ).
+              </strong>
+            </li>
+  
+            <li>
+              All food stuff will be arranged and planned so you only required to
+              bring your personal stuff.
+            </li>
+          </ul>
+  
+          <h3 class="instructions" [ngStyle]="{'padding-bottom':'0px'}">General Ground Rules:</h3>
+          <ul>
+            <li> Its a family gathering, and we all want join in on the fun.</li>
+            <li>
+               There won't be any swimming activitiess or alchohol beverages.
+            </li>
+            <li>
+               This trip oriented towards our direct Taheel family, So
+              unfortunately, no +1 for this trip.
+            </li>
+          </ul>
+          <p class="instructions">
+            Let us make this trip memorable, feel the joy & refresh our minds. For
+            further details about the trip please email me.
+            <br />
+            <br />
+            <strong class="instructions">
+              *The amount includes: Villa rent, food, drinks, bus transportation
+              fees.
+  
+            </strong>
+            <br>
+            <br>
+  
+            <strong class="instructions">
+                         Feel free to bring your own snacks if you like :)
+  
+  
+            </strong>
+          </p>
+        </div>
+        <div class="form-group">
+          <mat-form-field
+            class="form-control"
+            class="example-full-width"
+            appearance="fill"
+          >
+            <mat-label>Name:</mat-label>
+            <input matInput formControlName="name" type="text" required />
+          </mat-form-field>
+          <mat-radio-group
+            class="radiobtn"
+            formControlName="joinUs"
+            color="primary"
+            required
+          >
+            <mat-label>Do you want to join us:</mat-label>
+            <br />
+            <mat-radio-button value="{{ true }}">yes</mat-radio-button>
+            <mat-radio-button value="{{ false }}">no</mat-radio-button>
+          </mat-radio-group>
+          <div *ngIf="angForm.value.joinUs === 'true'">
+            <mat-form-field
+              class="form-control"
+              class="example-full-width"
+              appearance="fill"
+            >
+              <mat-label>email</mat-label>
+              <input
+                matInput
+                formControlName="email"
+                type="text"
+                placeholder="example@inspirejo.com"
+                [required]="angForm.value.joinUs != 'false'"
+              />
+            </mat-form-field>
+            <mat-form-field
+              class="form-control"
+              class="example-full-width"
+              appearance="fill"
+            >
+              <mat-label>phone number</mat-label>
+              <input matInput formControlName="phoneNumber" type="text" />
+            </mat-form-field>
+            <mat-form-field
+              class="form-control"
+              class="example-full-width"
+              appearance="fill"
+            >
+              <mat-label>adress</mat-label>
+              <input
+                matInput
+                formControlName="adress"
+                placeholder="amman-khalda"
+                type="text"
+              />
+            </mat-form-field>
+            <mat-radio-group
+              class="radiobtn"
+              formControlName="transportationMethod"
+              color="primary"
+              required
+            >
+              <mat-label>preferred transportation method </mat-label>
+              <br />
+              <mat-radio-button value="PrivateCar">private car</mat-radio-button>
+              <mat-radio-button value="bus"
+                >all group in one bus</mat-radio-button
+              >
+            </mat-radio-group>
+            <br />
+            <mat-radio-group
+              class="radiobtn"
+              formControlName="haveCar"
+              color="primary"
+              required
+              *ngIf="angForm.value.transportationMethod == 'PrivateCar'"
+            >
+              <mat-label>Do you Have a car</mat-label>
+              <br />
+              <mat-radio-button value="{{ true }}">yes</mat-radio-button>
+              <mat-radio-button value="{{ false }}">no</mat-radio-button>
+            </mat-radio-group>
+            <br />
+            <mat-radio-group
+              class="radiobtn"
+              formControlName="pickupOthers"
+              *ngIf="angForm.value.haveCar == 'true'"
+              color="primary"
+              required
+            >
+              <mat-label>can you pickup others with you?</mat-label>
+              <br />
+              <mat-radio-button value="{{ true }}">yes</mat-radio-button>
+              <mat-radio-button value="{{ false }}">no</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field
+              *ngIf="angForm.value.pickupOthers == 'true'"
+              class="form-control"
+              class="example-full-width"
+              appearance="fill"
+            >
+              <mat-label>how many</mat-label>
+              <br />
+              <input matInput formControlName="howMany" type="text" />
+            </mat-form-field>
+          </div>
+        </div>
+        <button
+          mat-raised-button
+          type="submit"
+          color="primary"
+          class="submitBtn"
+          (click)="logData()"
+        >
+          Save
+        </button>
+      </form>
+      <br />
+    </div>
+  </div>
+  

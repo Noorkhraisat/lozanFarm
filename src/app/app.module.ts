@@ -11,11 +11,16 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCarouselModule } from 'ng-mat-carousel';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewResultComponent } from './view-result/view-result.component';
+import { FormComponent } from './form/form.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ViewResultComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatInputModule,
     MatGridListModule,
+    MatTableModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatCarouselModule.forRoot()
